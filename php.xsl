@@ -21,14 +21,14 @@
 <xsl:apply-templates />
 </xsl:template>
 
-<!-- PHP Class template - START -->
+<!-- Class template - START -->
 <xsl:template match="packagedElement[@xmi:type='uml:Class']">
 <xsl:if test="@isAbstract='true'">abstract </xsl:if>class <xsl:value-of select="@name" /> {
 <xsl:apply-templates select="./ownedAttribute" />
 <xsl:apply-templates select="./ownedOperation" />
 }
 </xsl:template>
-<!-- PHP Class template - END -->
+<!-- Class template - END -->
 
 <!-- Class attributes template - START --> 
 <xsl:template match="ownedAttribute[@xmi:type='uml:Property']">

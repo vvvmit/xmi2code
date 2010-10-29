@@ -21,7 +21,7 @@
 <xsl:apply-templates />
 </xsl:template>
 
-<!-- PHP Class template - START -->
+<!-- Class template - START -->
 <xsl:template match="packagedElement[@xmi:type='uml:Class']">
 	<!-- Catching attribute visibility - START -->
 	<xsl:variable name="visibility">
@@ -49,7 +49,7 @@
 	<xsl:text>}&#xA;</xsl:text>
 
 </xsl:template>
-<!-- PHP Class template - END -->
+<!-- Class template - END -->
 
 <!-- Class attributes template - START --> 
 <xsl:template match="ownedAttribute[@xmi:type='uml:Property']">
