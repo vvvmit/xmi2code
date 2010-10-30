@@ -25,15 +25,9 @@ node[shape="record"]
 	<xsl:text>[label="{</xsl:text>
 	<xsl:value-of select="@name" />
 	<xsl:text>|</xsl:text>
-	<xsl:for-each select="./ownedAttribute">
-		<xsl:value-of select="@name" />
-		<xsl:text>\l</xsl:text>
-	</xsl:for-each>
+	<xsl:apply-templates select="./ownedAttribute" />
 	<xsl:text>|</xsl:text>
-	<xsl:for-each select="./ownedOperation">
-		<xsl:value-of select="@name" />
-		<xsl:text>()\l</xsl:text>
-	</xsl:for-each>
+	<xsl:apply-templates select="./ownedOperation" />
 	<xsl:text>}"]
 </xsl:text>
 </xsl:for-each>
@@ -54,4 +48,17 @@ edge [arrowhead = "empty"]
 
 }
 </xsl:template>
+
+<!-- Drawing attributes - START -->
+<xsl:template match="ownedAttribute">
+	<xsl:value-of select="@name" /><xsl:text>\l</xsl:text>
+</xsl:template>
+<!-- Drawing attributes - END -->
+
+<!-- Drawing operation - START -->
+<xsl:template match="ownedOperation">
+	<xsl:value-of select="@name" /><xsl:text>()\l</xsl:text>
+</xsl:template>
+<!-- Drawing operation - END -->
+
 </xsl:stylesheet>
