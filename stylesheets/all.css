@@ -1,19 +1,12 @@
 body {
-	margin-top: 1.0em;
-	background: #fff url(./images/background.png) repeat scroll 0 0;
+	background: #fff url(../images/background.png) repeat scroll 0 0;
 	font-family: "Helvetica,Arial,FreeSans";
 	color: #000000;
-}
-
-#container {
-	margin: 0 auto;
-	width: 700px;
 }
 
 h1 {
 	font-size: 3.8em;
 	color: #368;
-	margin-bottom: 3px;
 }
 
 h1 span {
@@ -41,32 +34,17 @@ a {
 
 .description {
 	font-size: 1.2em;
-	margin-bottom: 30px;
-	margin-top: 30px;
 	font-style: italic;
-}
-
-.download {
-	float: right;
 }
 
 pre {
 	font-weight:bold;
 	background: #000;
 	color: #0f0;
-	padding: 15px;
 	opacity:0.9;
-	overflow:auto;
-}
-
-hr {
-	border: 0;
-	width: 80%;
-	border-bottom: 1px solid #aaa
 }
 
 .footer {
 	text-align:center;
-	padding-top:30px;
 	font-style: italic;
 }
