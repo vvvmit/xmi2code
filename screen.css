@@ -1,6 +1,6 @@
 body {
 	margin-top: 1.0em;
-	background: #ffffff url(./images/background.png) repeat scroll 0 0;
+	background: #fff url(./images/background.png) repeat scroll 0 0;
 	font-family: "Helvetica,Arial,FreeSans";
 	color: #000000;
 }
@@ -12,30 +12,31 @@ body {
 
 h1 {
 	font-size: 3.8em;
-	color: #666419;
+	color: #368;
 	margin-bottom: 3px;
 }
 
-h1 .small {
+h1 span {
 	font-size: 0.4em;
 }
 
-h1 a {
+h1>a {
+	text-shadow: 0px 0px 1px #000;
 	text-decoration: none
 }
 
 h2 {
 	font-size: 1.5em;
-	color: #666419;
+	color: #368;
 }
 
 h3 {
 	text-align: center;
-	color: #666419;
+	color: #368;
 }
 
 a {
-	color: #666419;
+	color: #368;
 }
 
 .description {
@@ -50,9 +51,12 @@ a {
 }
 
 pre {
+	font-weight:bold;
 	background: #000;
-	color: #fff;
+	color: #0f0;
 	padding: 15px;
+	opacity:0.9;
+	overflow:auto;
 }
 
 hr {
