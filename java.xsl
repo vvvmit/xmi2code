@@ -107,10 +107,15 @@
 
 	<!-- Catching function return type - START -->
 	<xsl:variable name="type">
-		<xsl:if test="ownedParameter[@direction='return']">
-			<xsl:variable name="class_id" select="ownedParameter[@direction='return']/type/@xmi:idref" />
-			<xsl:value-of select="concat(//packagedElement[@xmi:id=$class_id]/@name,' ')" />
-		</xsl:if>
+		<xsl:choose>
+			<xsl:when test="ownedParameter[@direction='return']">
+				<xsl:variable name="class_id" select="ownedParameter[@direction='return']/type/@xmi:idref" />
+				<xsl:value-of select="concat(//packagedElement[@xmi:id=$class_id]/@name,' ')" />
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:text>void </xsl:text>
+			</xsl:otherwise>
+		</xsl:choose>
 	</xsl:variable>
 	<!-- Catching function return type - END -->
 
